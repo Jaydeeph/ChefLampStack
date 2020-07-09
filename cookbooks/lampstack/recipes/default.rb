@@ -3,7 +3,7 @@
 # Recipe:: default
 #
 # Copyright:: 2020, The Authors, All Rights Reserved.
-# include_recipe 'lampstack::01_yum_update.rb'
+include_recipe 'lampstack::01_yum_update.rb'
 include_recipe 'lampstack::02_install_packages.rb'
 include_recipe 'lampstack::03_enable_start_firewalld_service.rb'
 include_recipe 'lampstack::04_enable_httpd_service.rb'

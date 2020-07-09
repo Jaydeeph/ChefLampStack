@@ -1,9 +1,8 @@
 name 'lampstack'
-maintainer 'The Authors'
-maintainer_email 'you@example.com'
+maintainer 'Jay'
+maintainer_email 'jaydeep.hasmukhlal@cognizant.com'
 license 'All Rights Reserved'
 description 'Installs/Configures lampstack'
-long_description 'Installs/Configures lampstack'
 version '0.1.5'
 chef_version '>= 14.0'
 
