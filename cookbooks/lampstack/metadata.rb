@@ -4,7 +4,7 @@ maintainer_email 'you@example.com'
 license 'All Rights Reserved'
 description 'Installs/Configures lampstack'
 long_description 'Installs/Configures lampstack'
-version '0.1.0'
+version '0.1.2'
 chef_version '>= 14.0'
 
 # The `issues_url` points to the location where issues for this cookbook are
@@ -18,3 +18,5 @@ chef_version '>= 14.0'
 # a Supermarket.
 #
 # source_url 'https://github.com/<insert_org_here>/lampstack'
+
+depends 'firewalld', '~> 1.2.1'
