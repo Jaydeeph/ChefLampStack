@@ -3,7 +3,7 @@ maintainer 'Jay'
 maintainer_email 'jaydeep.hasmukhlal@cognizant.com'
 license 'All Rights Reserved'
 description 'Installs/Configures lampstack'
-version '0.1.5'
+version '0.1.6'
 chef_version '>= 14.0'
 
 # The `issues_url` points to the location where issues for this cookbook are
