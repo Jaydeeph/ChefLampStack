@@ -1,3 +1,5 @@
+#!/bin/bash
+
 # Create a backup of your original Apache configuration
 sudo cp /etc/httpd/conf/httpd.conf /etc/httpd/conf/httpd.conf.original
 
