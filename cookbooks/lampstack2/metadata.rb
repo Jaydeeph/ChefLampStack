@@ -1,10 +1,9 @@
 name 'lampstack2'
-maintainer 'The Authors'
-maintainer_email 'you@example.com'
+maintainer 'Jaydeep Hasmukhlal'
+maintainer_email 'jaydeep.hasmukhlal@cognizant.com'
 license 'All Rights Reserved'
 description 'Installs/Configures lampstack2'
-long_description 'Installs/Configures lampstack2'
-version '0.1.0'
+version '0.1.2'
 chef_version '>= 14.0'
 
 # The `issues_url` points to the location where issues for this cookbook are
