@@ -9,11 +9,18 @@ service 'httpd' do
 end
 
 # Makes a backup copy of the http.conf file.
-remote_file 'backup_httpd.conf_file' do
-  path node['lampstack2']['apache']['httpdconf_backup']
-  source node['lampstack2']['apache']['httpdconf_location']
+# remote_file 'backup_httpd.conf_file' do
+#   path node['lampstack2']['apache']['httpdconf_backup']
+#   source node['lampstack2']['apache']['httpdconf_location']
+#   owner 'root'
+#   group 'root'
+# end
+file node['lampstack2']['apache']['httpdconf_location'] do
   owner 'root'
   group 'root'
+  mode 0755
+  content ::File.open(node['lampstack2']['apache']['httpdconf_backup']).read
+  action :create
 end
 
 # Places the index.php file in the following directory "/etc/httpd/conf/".
