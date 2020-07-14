@@ -3,11 +3,6 @@ service 'mariadb' do
   action :enable
 end
 
-# Starts httpd service
-service 'mariadb' do
-  action :start
-end
-
 # Runs the following bash script. The script uses spawn and expect linux script which enables to use mysql_secure_installation for automation
 bash 'secure_mariadb_mysql' do
   cwd ::Dir.pwd
@@ -34,4 +29,9 @@ bash 'secure_mariadb_mysql' do
     echo "$SECURE_MYSQL"
     aptitude -y purge expect
   EOH
+end
+
+# Starts httpd service
+service 'mariadb' do
+  action :start
 end
