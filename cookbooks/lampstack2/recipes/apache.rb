@@ -10,13 +10,13 @@ end
 
 # Makes a backup copy of the http.conf file.
 remote_file 'backup_httpd.conf_file' do
-  path '/etc/httpd/conf/httpd.conf.original'
-  source '/etc/httpd/conf/httpd.conf'
+  path node['lampstack2']['apache']['httpdconf_backup']
+  source node['lampstack2']['apache']['httpdconf_location']
   owner 'root'
   group 'root'
 end
 
-# Places the index.php file in the following directory "/var/www/html/".
+# Places the index.php file in the following directory "/etc/httpd/conf/".
 template '/etc/httpd/conf/httpd.conf' do
   source 'httpd.conf.erb'
   action :create

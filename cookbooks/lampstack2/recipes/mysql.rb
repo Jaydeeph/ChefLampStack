@@ -34,5 +34,4 @@ bash 'secure_mariadb_mysql' do
     echo "$SECURE_MYSQL"
     aptitude -y purge expect
   EOH
-  not_if { ::File.exist?(extract_path) }
 end

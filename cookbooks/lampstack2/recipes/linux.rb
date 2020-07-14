@@ -5,7 +5,7 @@ execute 'yum_update' do
 end
 
 # Installs the following package one by one using the array list provided.
-%W('nano curl wget bind-utils telnet httpd mod_ssl openssl mariadb-server mariadb php php-mysql php-gd php-mbstring').each do |package|
+node['lampstack2']['linux']['packages'].each do |package|
   package package do
     action :install
   end
