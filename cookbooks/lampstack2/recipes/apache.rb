@@ -15,11 +15,11 @@ end
 #   owner 'root'
 #   group 'root'
 # end
-file node['lampstack2']['apache']['httpdconf_location'] do
+file node['lampstack2']['apache']['httpdconf_backup'] do
   owner 'root'
   group 'root'
   mode 0755
-  content ::File.open(node['lampstack2']['apache']['httpdconf_backup']).read
+  content ::File.open(node['lampstack2']['apache']['httpdconf_location']).read
   action :create
 end
 
