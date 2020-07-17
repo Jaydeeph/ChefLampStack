@@ -31,5 +31,5 @@ end
 
 # Add PHP configuration into Apache
 execute 'php_config_into_apache' do
-  command 'echo "AddType application/x-httpd-php .php" | sudo tee -a /etc/httpd/conf/httpd.conf'
+  command 'echo "AddType application/x-httpd-php .php" | tee -a /etc/httpd/conf/httpd.conf'
 end
