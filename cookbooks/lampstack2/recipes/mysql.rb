@@ -11,7 +11,7 @@ template '/tmp/secure_mysql.sh' do
   action :create
 end
 
-execute 'apache_configtest' do
+execute 'run_secure_mysql_script' do
   command '/tmp/secure_mysql.sh \'testing new password\''
 end
 
