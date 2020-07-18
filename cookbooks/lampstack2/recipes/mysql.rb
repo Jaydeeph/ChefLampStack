@@ -4,8 +4,9 @@ service 'mariadb' do
 end
 
 # Places the secure_mysql.sh file in the root user directory".
-template '~/secure_mysql.sh' do
+template '/root/secure_mysql.sh' do
   mode '0777'
+  owner 'root'
   source 'secure_mysql.sh.erb'
   action :create
 end
