@@ -4,7 +4,7 @@ service 'mariadb' do
 end
 
 # Places the secure_mysql.sh file in the root user directory".
-template '/root/secure_mysql.sh' do
+template '/tmp/secure_mysql.sh' do
   mode '0777'
   owner 'root'
   source 'secure_mysql.sh.erb'
@@ -12,7 +12,7 @@ template '/root/secure_mysql.sh' do
 end
 
 execute 'apache_configtest' do
-  command '~./secure_mysql.sh \'testing new password\''
+  command '/tmp/secure_mysql.sh \'testing new password\''
 end
 
 # Runs the following bash script. The script uses spawn and expect linux script which enables to use mysql_secure_installation for automation
