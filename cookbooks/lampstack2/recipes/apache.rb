@@ -24,7 +24,7 @@ file node['lampstack2']['apache']['httpdconf_backup'] do
 end
 
 # Places the index.php file in the following directory "/etc/httpd/conf/".
-template '/etc/httpd/conf/httpd.conf' do
+template node['lampstack2']['apache']['httpdconf_location'] do
   source 'httpd.conf.erb'
   action :create
 end
